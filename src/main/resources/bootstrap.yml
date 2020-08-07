@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ms-system
+  cloud:
+    config:
+      uri: http://httpconfigcenter:8888
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+logging:
+  path: /data/logs/${spring.application.name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

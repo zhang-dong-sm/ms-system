@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- jace-->
+    <bean class="com.shinemo.jace.client.JaceCenterClient" init-method="init">
+        <property name="aceCenterIp" value="aace.shinemo.net"/>
+        <property name="aceCenterPort" value="16999"/>
+    </bean>
+
+    <bean id="userProficeClient" class="com.shinemo.jace.api.userprofices.UserProficeClient"/>
+
+    <!-- data source -->
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">-->
+<!--        <property name="url" value="${mysql.crm.url}"/>-->
+<!--        <property name="username" value="${mysql.crm.user}"/>-->
+<!--        <property name="password" value="${mysql.crm.pwd}"/>-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="initialSize" value="5"/>-->
+<!--        <property name="minIdle" value="5"/>-->
+<!--        <property name="maxActive" value="10"/>-->
+<!--        <property name="maxWait" value="60000"/>-->
+<!--        <property name="timeBetweenEvictionRunsMillis" value="60000"/>-->
+<!--        <property name="minEvictableIdleTimeMillis" value="300000"/>-->
+<!--        <property name="validationQuery" value="select 1;"/>-->
+<!--        <property name="testWhileIdle" value="true"/>-->
+<!--        <property name="testOnBorrow" value="false"/>-->
+<!--        <property name="testOnReturn" value="false"/>-->
+<!--        <property name="poolPreparedStatements" value="true"/>-->
+<!--        <property name="maxPoolPreparedStatementPerConnectionSize" value="10"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; SqlSessionFactory Config &ndash;&gt;-->
+<!--    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--        <property name="mapperLocations">-->
+<!--            <array>-->
+<!--                <value>classpath*:shinemo_crm/*.xml</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        <property name="globalConfig" ref="globalConfig"/>-->
+<!--        <property name="plugins">-->
+<!--            <array>-->
+<!--                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"/>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">-->
+<!--        <property name="dbConfig" ref="dbConfig"/>-->
+<!--    </bean>-->
+<!--    <bean id="dbConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig.DbConfig">-->
+<!--        <property name="keyGenerator" ref="keyGenerator"/>-->
+<!--    </bean>-->
+<!--    <bean id="keyGenerator" class="com.baomidou.mybatisplus.extension.incrementer.H2KeyGenerator"/>-->
+<!--    &lt;!&ndash; MyBatis Mapper Scan Config  &ndash;&gt;-->
+<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+<!--        <property name="basePackage" value="com.shinemo.bi.ms.system.dao"/>-->
+<!--    </bean>-->
+</beans>
